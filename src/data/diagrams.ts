@@ -1,0 +1,31 @@
+import type { DiagramMeta } from '@/types/content'
+import { v2DiagramMeta } from './diagrams-v2'
+
+export const diagrams: DiagramMeta[] = [
+  { id: 'agent-overview', title: 'Agent 系统全景架构图', type: '参考架构', description: '用户、任务、Agent Core、规划、记忆、工具、环境、观测与结果之间的控制流和数据流。', component: 'AgentOverviewDiagram', tags: ['架构', '全景'] },
+  { id: 'agent-loop', title: 'Agent 核心执行循环图', type: '概念模型', description: 'Observe → Think → Plan → Act → Observe 的循环与控制门控。', component: 'AgentLoopDiagram', tags: ['基础', '循环'] },
+  { id: 'layered-architecture', title: 'Agent 分层架构图', type: '参考架构', description: '交互层、编排层、能力层、执行层与基础设施层的分层边界。', component: 'LayeredArchitectureDiagram', tags: ['架构', '分层'] },
+  { id: 'planner-executor', title: 'Planner-Executor 架构图', type: '参考架构', description: '规划器与执行器解耦，计划状态和执行反馈的回流关系。', component: 'PlannerExecutorDiagram', tags: ['架构', 'Planning'] },
+  { id: 'react-flow', title: 'ReAct 执行流程图', type: '概念模型', description: '推理、行动、观察之间的迭代与终止条件。', component: 'ReactFlowDiagram', tags: ['模式', 'ReAct'] },
+  { id: 'plan-execute-flow', title: 'Plan-and-Execute 流程图', type: '概念模型', description: '计划生成、任务队列、逐步执行与重规划。', component: 'PlanExecuteDiagram', tags: ['模式', 'Planning'] },
+  { id: 'reflection-architecture', title: 'Reflection 架构图', type: '参考架构', description: '生成、评估与修订之间的反馈回路。', component: 'ReflectionDiagram', tags: ['模式', 'Reflection'] },
+  { id: 'memory-layers', title: 'Agent Memory 分层结构图', type: '概念模型', description: '工作记忆、情节记忆、语义记忆、程序记忆与外部知识库的边界。', component: 'MemoryLayersDiagram', tags: ['Memory', '状态'] },
+  { id: 'context-flow', title: 'Context Engineering 数据流图', type: '参考架构', description: '上下文采集、选择、压缩、组装、缓存与质量评估流程。', component: 'ContextFlowDiagram', tags: ['Context', '数据流'] },
+  { id: 'tool-sequence', title: 'Tool Calling 时序图', type: '概念模型', description: '模型、Agent Runtime、Tool Registry 与外部服务之间的调用时序。', component: 'ToolSequenceDiagram', tags: ['工具', '时序'] },
+  { id: 'mcp-architecture', title: 'MCP Client-Server 架构图', type: '参考架构', description: 'MCP Host、Client、Server 与数据源之间的协议关系。', component: 'McpDiagram', tags: ['MCP', '工具'] },
+  { id: 'supervisor-architecture', title: 'Multi-Agent Supervisor 架构图', type: '参考架构', description: '监督者、专业 Agent、共享状态与工具之间的委派关系。', component: 'SupervisorDiagram', tags: ['Multi-Agent', '架构'] },
+  { id: 'agent-messages', title: '多 Agent 消息通信图', type: '概念模型', description: '消息协议、广播、点对点通信与共享记忆的关系。', component: 'MessageDiagram', tags: ['Multi-Agent', '通信'] },
+  { id: 'runtime-architecture', title: 'Agent Runtime 架构图', type: '参考架构', description: '任务队列、调度器、执行引擎、状态存储与可观测性模块。', component: 'RuntimeDiagram', tags: ['Runtime', '架构'] },
+  { id: 'durable-execution', title: 'Durable Execution 流程图', type: '参考架构', description: '事件日志、检查点、故障恢复与续跑流程。', component: 'DurableDiagram', tags: ['Runtime', '恢复'] },
+  { id: 'hitl-approval', title: 'Human-in-the-Loop 审批流程图', type: '参考架构', description: '高风险动作进入人工审批、通过或拒绝后的状态流转。', component: 'HitlDiagram', tags: ['安全', 'HITL'] },
+  { id: 'evaluation-loop', title: 'Agent Evaluation 评测闭环图', type: '参考架构', description: '数据集、执行轨迹、指标、评审与回归闭环。', component: 'EvaluationDiagram', tags: ['评测', '闭环'] },
+  { id: 'observability-architecture', title: 'Agent Observability 架构图', type: '参考架构', description: 'Trace、Metric、Log 与事件之间的采集与关联。', component: 'ObservabilityDiagram', tags: ['可观测性', '架构'] },
+  { id: 'security-boundaries', title: 'Agent Security 防护边界图', type: '参考架构', description: '不可信输入、工具权限、沙箱、审批与审计边界。', component: 'SecurityDiagram', tags: ['安全', '边界'] },
+  { id: 'production-deployment', title: 'Agent Production 部署架构图', type: '参考架构', description: '网关、排队、Agent Worker、模型路由、状态库与监控。', component: 'ProductionDiagram', tags: ['生产', '部署'] },
+  { id: 'task-lifecycle', title: 'Agent 任务生命周期状态图', type: '概念模型', description: 'Created、Planned、Running、Waiting、Failed、Completed 等状态转换。', component: 'TaskLifecycleDiagram', tags: ['状态', 'Runtime'] },
+  { id: 'failure-recovery', title: 'Agent 故障恢复与重试流程图', type: '参考架构', description: '错误分类、可重试判断、退避、幂等与升级处理。', component: 'RecoveryDiagram', tags: ['可靠性', '恢复'] },
+  { id: 'agent-rag', title: 'Agent RAG 架构图', type: '参考架构', description: '检索、上下文构建、生成、验证与引用回链。', component: 'RagDiagram', tags: ['RAG', 'Context'] },
+  { id: 'tool-permission', title: 'Agent 工具权限控制图', type: '参考架构', description: '工具权限策略、身份、审批与审计的调用门控。', component: 'ToolPermissionDiagram', tags: ['工具', '安全'] },
+  { id: 'single-vs-multi', title: '单 Agent 与 Multi-Agent 架构对比图', type: '概念模型', description: '单 Agent 的集中控制与多 Agent 的协作通信结构对比。', component: 'SingleVsMultiDiagram', tags: ['Multi-Agent', '对比'] },
+  ...v2DiagramMeta,
+]
